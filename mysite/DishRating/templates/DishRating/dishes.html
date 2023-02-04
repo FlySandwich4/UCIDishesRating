@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comments</title>
+    <link rel="stylesheet" href="{% static 'CSS/dishes.css' %}">
+</head>
+
+<body>
+    <div class="all_in_one_box">
+        {% for obj in dishData %}
+            <div class="each_dish_box">
+                <div class="each_dish_UI">
+                    <div class="each_dish_UI_left">
+                        
+                    </div>
+                    <div calss="each_dish_UI_right">
+
+                        <div>
+                            There is a dish called {{obj}}
+                            
+                            {% for comment in commentData.all %}
+                            Comment {{index}} : {{comment}}
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+        {% endfor %}
+    </div>
+    
+</body>
+
+</html>

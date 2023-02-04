@@ -102,7 +102,7 @@ class Dishes(models.Model):
     dishID = models.IntegerField(primary_key=True)
 
     def __str__(self):
-        pass
+        return str(self.dishName)
 
     def getID(self):
         pass
