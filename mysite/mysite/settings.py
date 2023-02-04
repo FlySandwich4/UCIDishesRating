@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+#'DishRating.apps.DishratingConfig',
 
 INSTALLED_APPS = [
     'DishRating.apps.DishratingConfig',
