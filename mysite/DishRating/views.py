@@ -20,3 +20,9 @@ def dishesPage(request):
 
 def introPage(request):
     return render(request, 'DishRating/intro.html')
+
+def emberPage(request):
+    dishData = Dishes.objects.filter(dishType="Ember")
+    return render(request, 'DishRating/Ember.html',{
+        'dishData': dishData
+    })
