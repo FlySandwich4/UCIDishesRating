@@ -17,3 +17,6 @@ def dishesPage(request):
         'commentData': commentData,
         'index': 0
     })
+
+def introPage(request):
+    return render(request, 'DishRating/intro.html')
