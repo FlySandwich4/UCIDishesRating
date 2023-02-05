@@ -1,0 +1,51 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Sun Feb  5 12:59:30 2023] ***
+compiled with version: 9.4.0 on 04 February 2023 17:38:44
+os: Linux-5.15.0-1028-aws #32~20.04.1-Ubuntu SMP Mon Jan 9 18:02:08 UTC 2023
+nodename: ip-172-31-17-4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/demo/UCIDishesRating/mysite
+detected binary path: /home/ubuntu/demo/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/demo/UCIDishesRating/mysite
+your processes number limit is 3811
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/demo/UCIDishesRating/mysite/mysite.sock fd 3
+Python version: 3.8.10 (default, Nov 14 2022, 12:59:47)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/demo
+Set PythonHome to /home/ubuntu/demo
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d4ab959770
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d4ab959770 pid: 31183 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 31183)
+spawned uWSGI worker 1 (pid: 31185, cores: 1)
+spawned uWSGI worker 2 (pid: 31186, cores: 1)
+spawned uWSGI worker 3 (pid: 31187, cores: 1)
+spawned uWSGI worker 4 (pid: 31188, cores: 1)
+spawned uWSGI worker 5 (pid: 31189, cores: 1)
+spawned uWSGI worker 6 (pid: 31190, cores: 1)
+spawned uWSGI worker 7 (pid: 31191, cores: 1)
+spawned uWSGI worker 8 (pid: 31192, cores: 1)
+spawned uWSGI worker 9 (pid: 31193, cores: 1)
+spawned uWSGI worker 10 (pid: 31194, cores: 1)
+[pid: 31193|app: 0|req: 1/1] 64.189.31.10 () {62 vars in 1113 bytes} [Sun Feb  5 04:59:33 2023] GET / => generated 7668 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 31194|app: 0|req: 1/2] 64.189.31.10 () {62 vars in 1113 bytes} [Sun Feb  5 04:59:34 2023] GET / => generated 7668 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 31193|app: 0|req: 2/3] 64.189.31.10 () {60 vars in 1084 bytes} [Sun Feb  5 04:59:34 2023] GET /pizza => generated 19472 bytes in 13 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 31194|app: 0|req: 2/4] 64.189.31.10 () {62 vars in 1115 bytes} [Sun Feb  5 04:59:43 2023] GET /pizza => generated 19472 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 209 bytes (2 switches on core 0)
+Meatball pizza
+comment
+<QuerySet []>
+[pid: 31193|app: 0|req: 3/5] 64.189.31.10 () {60 vars in 1097 bytes} [Sun Feb  5 04:59:45 2023] GET /dishes/46 => generated 6698 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 31194|app: 0|req: 3/6] 64.189.31.10 () {60 vars in 1083 bytes} [Sun Feb  5 04:59:47 2023] GET / => generated 7668 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 31192|app: 0|req: 1/7] 64.189.31.10 () {60 vars in 1074 bytes} [Sun Feb  5 04:59:48 2023] GET / => generated 7668 bytes in 33 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 31194|app: 0|req: 4/8] 64.189.31.10 () {62 vars in 1105 bytes} [Sun Feb  5 05:01:12 2023] GET / => generated 7668 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 208 bytes (2 switches on core 0)
+[pid: 31194|app: 0|req: 5/9] 65.49.20.66 () {36 vars in 458 bytes} [Sun Feb  5 05:03:45 2023] GET / => generated 143 bytes in 20 msecs (HTTP/1.1 400) 4 headers in 172 bytes (2 switches on core 0)
