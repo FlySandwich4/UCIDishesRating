@@ -100,6 +100,11 @@ class Comments(models.Model):
 class Dishes(models.Model):
     dishName = models.CharField(max_length = 30)
     dishID = models.IntegerField(primary_key=True)
+    dishType = models.CharField(max_length= 30, default="None",null=True, blank=True)
+    dishCal = models.IntegerField()
+    dishRate = models.IntegerField()
+    dishDescribe = models.CharField(max_length=250,default="None",null=True, blank=True)
+
 
     def __str__(self):
         return str(self.dishName)
