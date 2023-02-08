@@ -47,138 +47,151 @@
             </div>      
         </div>
     </nav>
+    <style>
+        .card {
+
+            margin: 0 auto; /* Added */
+            margin-top: 30px;
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+        }   
+
+
+    </style>
 </head>
 
-<body style="background-image: url('https://source.unsplash.com/random/?food,light'); background-repeat: no-repeat; background-size: cover;" class="bg-success-subtle">
+<body style="background-image: url('https://source.unsplash.com/random/?food,light'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;" class="bg-success-subtle">
 
-    <div class="card position-absolute top-50 start-50 translate-middle" style="width: 55rem; ">
-        <div class="card-top">
-            <div class="card-body">
-                <!-- dish intro? -->
+    <div style="padding-bottom: 50px;">
+        <div class="card mb-3" style="width: 55rem; ">
+            <div class="card-top">
                 <div class="card-body">
-                    <div>
-                        <div class="container ">
+                    <!-- dish intro? -->
+                    <div class="card-body">
+                        <div>
+                            <div class="container ">
+                                <div class="row align-items-start">
+                                <div class="col">
+                                    <h5 class="card-title">{{dishData}}</h5>
+                                </div>
+                                <div class="col">
+                                    <h5 class="card-title">Calories: {{dishData.dishCal}}</h5>
+                                    
+                                </div>
+                                <div class="col">
+                                    <h5 class="card-title">
+                                        {% with i=0 %}
+                                        {% with j=dishData.dishRate %}
+                                        Rating: 
+                                        
+                                        <a href="#" onclick="alert('Comming Soon!');" style="text-decoration:none">
+                                        <!-- star 1 -->
+                                        {% if j > 0 %}
+                                            &#9733
+                                        {% else %}
+                                            &#9734
+                                        {% endif %}
+
+                                        <!-- star 2 -->
+                                        {% if j > 1 %}
+                                            &#9733
+                                        {% else %}
+                                            &#9734
+                                        {% endif %}
+
+                                        <!-- star 3 -->
+                                        {% if j > 2 %}
+                                            &#9733
+                                        {% else %}
+                                            &#9734
+                                        {% endif %}
+
+                                        <!-- star 4 -->
+                                        {% if j > 3 %}
+                                            &#9733
+                                        {% else %}
+                                            &#9734
+                                        {% endif %}
+
+                                        <!-- star 5 -->
+                                        {% if j > 4 %}
+                                            &#9733
+                                        {% else %}
+                                            &#9734
+                                        {% endif %}{% endwith %}{% endwith %}
+                                        </a>
+                                    </h5>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <p class="card-text"></p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                    <div class="container">
+                        <div class="row">
+                        <div class="col" >
+                            {{dishData.dishDescribe}}
+                            {{dishData.id}}
+                        </div>
+                        <div class="col" style="text-align: center; margin-left: 8rem;">
+                            
+                            <!-- <form method="get" action="{{the_url}}">
+                            <button type="submit" class="btn btn-success">See Comments</button>
+                            </form> -->
+                            
+                        </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+
+
+                    <p></p>
+                </div>
+            </div>
+            <div class="card-body">
+                <!-- django for loop -->
+                {% for each_comUsr in comUsrData %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <!-- user: pulishDate -->
+                        <div class="container text-center" >
                             <div class="row align-items-start">
                             <div class="col">
-                                <h5 class="card-title">{{dishData}}</h5>
+                                {{each_comUsr.1.userName}}
                             </div>
                             <div class="col">
-                                <h5 class="card-title">Calories: {{dishData.dishCal}}</h5>
-                                
+                                ID: {{each_comUsr.0.userAccount}}
                             </div>
                             <div class="col">
-                                <h5 class="card-title">
-                                    {% with i=0 %}
-                                    {% with j=dishData.dishRate %}
-                                    Rating: 
-                                    
-                                    <a href="#" onclick="alert('Comming Soon!');" style="text-decoration:none">
-                                    <!-- star 1 -->
-                                    {% if j > 0 %}
-                                        &#9733
-                                    {% else %}
-                                        &#9734
-                                    {% endif %}
-
-                                    <!-- star 2 -->
-                                    {% if j > 1 %}
-                                        &#9733
-                                    {% else %}
-                                        &#9734
-                                    {% endif %}
-
-                                    <!-- star 3 -->
-                                    {% if j > 2 %}
-                                        &#9733
-                                    {% else %}
-                                        &#9734
-                                    {% endif %}
-
-                                    <!-- star 4 -->
-                                    {% if j > 3 %}
-                                        &#9733
-                                    {% else %}
-                                        &#9734
-                                    {% endif %}
-
-                                    <!-- star 5 -->
-                                    {% if j > 4 %}
-                                        &#9733
-                                    {% else %}
-                                        &#9734
-                                    {% endif %}{% endwith %}{% endwith %}
-                                    </a>
-                                </h5>
+                                Published at: <br>{{each_comUsr.0.pubDate}}
                             </div>
                             </div>
                         </div>
-                    </div>
-                
-                <p class="card-text"></p>
-                <p class="card-text"><small class="text-muted"></small></p>
-                <div class="container">
-                    <div class="row">
-                    <div class="col" >
-                        {{dishData.dishDescribe}}
-                        {{dishData.id}}
-                    </div>
-                    <div class="col" style="text-align: center; margin-left: 8rem;">
-                        
-                        <!-- <form method="get" action="{{the_url}}">
-                        <button type="submit" class="btn btn-success">See Comments</button>
-                        </form> -->
-                        
-                    </div>
+                        <div style="background-color: rgb(195, 195, 195);
+                                    width: 100%; padding-left: 5%;
+                                    padding-right: 5%;">
+                            <p >{{each_comUsr.0}}</p>
+                        </div>
                     </div>
                 </div>
-                
-                </div>
 
-
-
-                <p></p>
+                {% endfor %}
             </div>
-        </div>
-        <div class="card-body">
-            <!-- django for loop -->
-            {% for each_comUsr in comUsrData %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <!-- user: pulishDate -->
-                    <div class="container text-center" >
-                        <div class="row align-items-start">
-                        <div class="col">
-                            {{each_comUsr.1.userName}}
-                        </div>
-                        <div class="col">
-                            ID: {{each_comUsr.0.userAccount}}
-                        </div>
-                        <div class="col">
-                            Published at: <br>{{each_comUsr.0.pubDate}}
-                        </div>
-                        </div>
-                    </div>
-                    <div style="background-color: rgb(195, 195, 195);
-                                width: 100%; padding-left: 5%;
-                                padding-right: 5%;">
-                        <p >{{each_comUsr.0}}</p>
-                    </div>
-                </div>
-            </div>
-
-            {% endfor %}
         </div>
     </div>
 
-
     <!-- comment submit -->
     <form action="", method="POST">
+        {% csrf_token %}
     <div class="container text-center fixed-bottom mb-2">
         <div class="row align-items-start">
           <div class="col-1" ></div>
           <div class="col-9" >
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comment" required></textarea>
                 <label for="floatingTextarea">Comments</label>
                 <div class="invalid-feedback">
                     Please Write Something:)

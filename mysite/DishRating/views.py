@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Comments, Users, Dishes
+from django.utils import timezone
+from django.http import HttpResponseRedirect
+# views.py
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -59,6 +63,15 @@ def bakeryPage(request):
     })
 
 def commentPage(request, urlDishID):
+    if request.method == 'POST':
+        postDic = request.POST
+        print(postDic["comment"])
+        theUser = Users.objects.get(userAccount="Anonymous")
+        theDish = Dishes.objects.get(dishID=urlDishID)
+        Comments(comment=postDic["comment"],userAccount=theUser,
+                 pubDate=timezone.now(),
+                 dishID=theDish).save()
+        return HttpResponseRedirect(request.path_info)
     dishData = Dishes.objects.get(dishID=urlDishID)
     print(dishData)
     commentData = Comments.objects.filter(dishID=urlDishID)
