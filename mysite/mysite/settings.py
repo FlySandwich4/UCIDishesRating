@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-fc$ebs%f19w^cm=m^3yv-fxtk2x#oszm0+cd(d_qnh040nig*k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://ratemydining.dev','127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = ['https://ratemydining.dev','http://127.0.0.1']
 
 
 # Application definition
