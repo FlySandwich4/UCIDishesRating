@@ -93,6 +93,14 @@ body{
 
 
 @media (max-width: 1000px) {
+    body{
+        overflow: auto;
+        background-image: url("/static/Img/main.jpg");
+        background-size: cover;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+    }
     .box {
       flex-basis: 100%;
     }
