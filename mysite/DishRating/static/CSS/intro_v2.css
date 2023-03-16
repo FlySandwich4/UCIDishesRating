@@ -100,6 +100,7 @@ body{
         background-size: cover;
         text-align: center;
         background-attachment: fixed;
+        overflow-x:hidden;
     }
 
     .main-nav{
@@ -127,7 +128,8 @@ body{
     }
     .left {
         width: 100vw;
-        height: 50vh;
+        height: fit-content;
+        min-height: 50vh;
     }
     .right{
         height:100vh;
