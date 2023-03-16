@@ -94,6 +94,10 @@ body{
 
 
 @media (max-width: 1000px) {
+    html{
+        position: relative;
+        overflow: hidden;
+    }
     body{
         overflow:scroll;
         background-image: url("/static/Img/main.jpg");
@@ -101,6 +105,7 @@ body{
         text-align: center;
         background-attachment: fixed;
         overflow-x:hidden;
+        margin: auto;
     }
 
     .main-nav{
