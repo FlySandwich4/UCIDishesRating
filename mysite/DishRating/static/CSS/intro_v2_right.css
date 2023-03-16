@@ -1,0 +1,90 @@
+.right {
+    padding:30px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+}
+
+.box {
+    flex-basis: 50%; /* slightly less than 50% to account for margins */
+  }
+
+
+.column-2{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: rgb(89, 156, 89);
+}
+
+.column-2:hover{
+    transform: scale(1.05);
+}
+
+
+.left-content{
+    display: inherit;
+    flex-basis: 30%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70%;
+    height: 100%;
+}
+
+.right-content-text{
+    font-size: 30px;
+    color:aliceblue;
+    font-weight: 500;
+}
+
+.inner-img{
+    aspect-ratio: 1 / 1;
+    height: 90%;
+    border-radius: 100%;
+    border-style:solid;
+    border-width: 10px;
+    border-color: rgb(53, 92, 53);
+    background-size: contain;
+}
+
+.ember{
+    background-image: url("/static/Img_v2/Grill_350.png");
+}
+
+.grubb{
+    background-image: url("/static/Img_v2/Grubb_350.png");
+}
+
+.pizza{
+    background-image: url("/static/Img_v2/pizza.png");
+}
+
+.soups{
+    background-image: url("/static/Img_v2/soup.png");
+}
+
+.vegan{
+    background-image: url("/static/Img_v2/vegan.png");
+}
+
+.bakery{
+    background-image: url("/static/Img_v2/bakery.png");
+}
+
+

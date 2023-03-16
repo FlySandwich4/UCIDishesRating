@@ -23,7 +23,8 @@ def dishesPage(request):
     })
 
 def introPage(request):
-    return render(request, 'DishRating/intro.html')
+    # Mar/9/2023 changed to intro_v2
+    return render(request, 'DishRating/intro_v2.html')
 
 def emberPage(request):
     dishData = Dishes.objects.filter(dishType="Ember")
