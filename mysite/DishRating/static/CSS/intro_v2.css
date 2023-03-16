@@ -100,6 +100,24 @@ body{
         text-align: center;
         height: 100vh;
         width: 100vw;
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
+    .main-text1{
+        display: inherit;
+        margin: auto;
+        font-size: 100px;
+        width: 100%;
+        color:aliceblue;
+        font-weight: 900;
+        flex-basis: 50%;
+        justify-content: end;
+        flex-direction: column;
+        text-shadow:1px 2px 9px #333333;
+    }
+    
+    .main1-inner-text{
+        font-size: 40px;
     }
     .box {
       flex-basis: 100%;
@@ -109,6 +127,6 @@ body{
         height: 50vh;
     }
     .right{
-        height:auto;
+        height:100vh;
     }
   }
