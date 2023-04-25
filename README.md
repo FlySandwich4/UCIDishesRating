@@ -1,4 +1,4 @@
-# UCIDishesRating
+# UCIDishesRating UCI Hackathon 2023
 Django Based Web Application for UCI Dishes Rating.
 
 ## Inspiration
